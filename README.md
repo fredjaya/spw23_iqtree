@@ -51,18 +51,18 @@ Download the following files:
 > * Is there missing data? Do you think if missing data can be problematic?
 
 
-## 3. Inferring the first phylogeny
+## 2. Inferring the first phylogeny
  
 You can now start to reconstruct a maximum-likelihood (ML) tree
 for the Turtle data set (assuming that you are in the same folder where the alignment is 
 stored).
 
-> What is the command line to run `iqtree2` that takes 
-> the alignment file `turtle.fa` as input, performs 1000 ultrafast bootstrap replicates,
-> and automatically determines the best number of cores to use (`-T AUTO` option)?
+*What is the command line to run `iqtree2` that takes 
+the alignment file `turtle.fa` as input, performs 1000 ultrafast bootstrap replicates,
+and automatically determines the best number of cores to use (`-T AUTO` option)?*
 
 <details>
-<summary>Show me the code:</summary>  
+<summary>Show me the command line:</summary>  
 
 ```
 iqtree2 -s turtle.fa -B 1000 -T AUTO
@@ -95,7 +95,7 @@ Once the run is done, IQ-TREE will write several output files including:
 **QUESTIONS:**
 > * Look at the report file `turtle.fa.iqtree`. 
 > 
-> * What is the best-fit model name? What do you know about this model? (see [substitution models](../Substitution-Models) available in IQ-TREE)
+> * What is the best-fit model name? What do you know about this model? (see [substitution models](http://www.iqtree.org/doc/Substitution-Models) available in IQ-TREE)
 > 
 > * What are the AIC/AICc/BIC scores of this model and tree?
 > 
@@ -105,23 +105,21 @@ Once the run is done, IQ-TREE will write several output files including:
 > 
 > * Does this tree agree with the published tree ([Chiari et al., 2012])?
 
-3) Applying partition model
----------------------------
-<div class="hline"></div>
-
+## 3. Applying a partition model
 
 We now perform a partition model analysis ([Chernomor et al., 2016]), where one allows 
 each partition to have its own model. 
 
-> What is the command line to run `iqtree2` that takes `turtle.fa` as input alignment,
-> `turtle.nex` as input partition file, performs 1000 ultrafast bootstrap replicates,
-> and automatically determines the best number of cores?
+*What is the command line to run `iqtree2` that takes `turtle.fa` as input alignment,
+`turtle.nex` as input partition file, performs 1000 ultrafast bootstrap replicates,
+and automatically determines the best number of cores?*
 
-<button type="button" class="btn btn-primary" id="button3" onclick="myFunction('button3','command3')">
-Show me the command line</button>
-<div id="command3" style="display: none; border:1px solid gray;">
+<details>
+<summary>Show me the command line:</summary>  
 
-<pre><code>iqtree2 -s turtle.fa -p turtle.nex -B 1000 -T AUTO</code></pre>
+```
+iqtree2 -s turtle.fa -p turtle.nex -B 1000 -T AUTO
+```
 
 Options explained:
 
@@ -129,12 +127,10 @@ Options explained:
   ([Chernomor et al., 2016]). That means, there is one set of branch lengths. 
   But each partition can have proportionally shorter or longer tree length, 
   representing slow or fast evolutionary rate, respectively.
-</ul>
-
-</div>
+</details>  
 
 
-> **QUESTIONS:**
+**QUESTIONS:**
 > 
 > * Look at the report file `turtle.nex.iqtree`. What are the AIC/AICc/BIC scores of 
 >   partition model? Is it better than the previous model?
@@ -145,43 +141,38 @@ Options explained:
 > * What is the ultrafast bootstrap support (%) for the relevant clade?
 > 
 > * Does this tree agree with the published tree ([Chiari et al., 2012])?
-{: .tip}
 
 
-4) Choosing the best partitioning scheme
-----------------------------------------
-<div class="hline"></div>
+## 4. Choosing the best partitioning scheme
 
 We now perform the PartitionFinder algorithm ([Lanfear et al., 2012]) that tries to 
 merge partitions to reduce the potential over-parameterization.
 
-> What is the command line to run `iqtree2` that takes `turtle.fa` as input alignment,
-> `turtle.nex` as input partition file, performs 1000 ultrafast bootstrap replicates,
-> merges the partitions with relaxed clustering algorithm,
-> and automatically determines the best number of cores?
+*What is the command line to run `iqtree2` that takes `turtle.fa` as input alignment,
+`turtle.nex` as input partition file, performs 1000 ultrafast bootstrap replicates,
+merges the partitions with relaxed clustering algorithm,
+and automatically determines the best number of cores?*
 
 * Please use `--prefix turtle.merge` to set the prefix for all output files as `turtle.merge.*`. 
   This is to avoid overwriting outputs from the previous analysis.
 
+<details>
+<summary>Show me the command line:</summary>  
 
-<button type="button" class="btn btn-primary" id="button4" onclick="myFunction('button4','command4')">
-Show me the command line</button>
-<div id="command4" style="display: none; border:1px solid gray;">
 
-<pre><code>iqtree2 -s turtle.fa -p turtle.nex -B 1000 -T AUTO -m MFP+MERGE -rcluster 10 --prefix turtle.merge</code></pre>
+```
+iqtree2 -s turtle.fa -p turtle.nex -B 1000 -T AUTO -m MFP+MERGE -rcluster 10 --prefix turtle.merge
+```
 
 Options explained:
 
-<ul>
 `-m MFP+MERGE` to perform PartitionFinder followed by tree reconstruction.
 `-rcluster 10` to reduce computations by only examining the top 10% partitioning 
   schemes using the *relaxed clustering algorithm* ([Lanfear et al., 2014]). 
-</ul>
 
-</div>
+</details>  
 
-> **QUESTIONS:**
-> 
+**QUESTIONS:**
 > * Look at the report file `turtle.merge.iqtree`. How many partitions do we have now?
 > 
 > * Look at the AIC/AICc/BIC scores. Compared with two previous models, is this model better or worse?
@@ -192,7 +183,6 @@ Options explained:
 > * What is the ultrafast bootstrap support (%) for the relevant clade?
 > 
 > * Does this tree agree with the published tree ([Chiari et al., 2012])?
-{: .tip}
 
 
 5) Tree mixture model
@@ -225,40 +215,32 @@ will need to use the option `-m` to specify the model, and adding "+T" to the mo
 For example, you can use `-m GTR+T`, but this model is a bit too simple. The better way is
 to look again the best model found in step 2, and add "+T" to that model name.
 
-> What is the command line to run `iqtree2` that takes `turtle.fa` as input alignment,
-> `turtle.trees` as input trees file, applies the MAST model combined with the best
-> model found in step 2?
+*What is the command line to run `iqtree2` that takes `turtle.fa` as input alignment,
+`turtle.trees` as input trees file, applies the MAST model combined with the best
+model found in step 2?*
 
 * Please use `--prefix turtle.mix` to set the prefix for all output files as `turtle.mix.*`. 
 
-<button type="button" class="btn btn-primary" id="button6" onclick="myFunction('button6','command6')">
-Show me the command line</button>
-<div id="command6" style="display: none; border:1px solid gray;">
+<details>
+<summary>Show me the command line:</summary>  
 
-<pre><code>iqtree2 -s turtle.fa -m BEST_MODEL_NAME+T -te turtle.trees --prefix turtle.mix
-</code></pre>
+```
+iqtree2 -s turtle.fa -m BEST_MODEL_NAME+T -te turtle.trees --prefix turtle.mix
+```
 	
 Options explained:	
 
-<ul>	
 `BEST_MODEL_NAME` is the model string found in step 2, that you need to replace with for
   this command line to run properly.
 `-te` is to specify a file containing the set of trees for the MAST model. 
   Currently, MAST only accepts a set of fixed tree topologies provided by the users. 
   It doesn't yet have the ability to automatically find the optimal trees.
-</ul>
+</details>
 
-</div>
-
-> **QUESTIONS:**
-> 
+**QUESTIONS:**
 > * Look at `turle.mix.iqtree` for the line printing the tree weights. Which tree has a higher weight? 
-{: .tip}
 
-6) Identifying most influential genes
--------------------------------------
-<div class="hline"></div>
-
+## 6. Identifying most influential genes
 
 Now we can investigate the cause for such topological difference between trees. One way 
 is to identify the genes that contribute the most phylogenetic signal towards one tree but
@@ -268,7 +250,7 @@ How can one do this? We can look at the gene-wise log-likelihood (logL) differen
 between the two given trees T1 and T2. Those genes having the largest logL(T1)-logL(T2) 
 will be in favor of T1. Whereas genes showing the largest logL(T2)-logL(T1) are favoring T2.
 
-To compute gen-wise log-likelihoods for the two trees, you can use the `-wpl` option 
+To compute gene-wise log-likelihoods for the two trees, you can use the `-wpl` option 
 (for writing partition log-likelihoods): 
 
 	iqtree2 -s turtle.fa -p turtle.nex.best_scheme.nex -z turtle.trees -n 0 -wpl --prefix turtle.wpl
@@ -282,8 +264,7 @@ software. You will need to tell the software to treat spaces as delimiters, so t
 the values are imported into different columns for easy processing (e.g., doing 
 log-likelikehood subtraction as pointed out above).
 
-> **QUESTIONS:**
->
+**QUESTIONS:**
 > * Compute the gene-wise log-likelihood differences between two trees. 
 > 
 > * What is the name of the gene showing the largest log-likelihood difference between two trees?
@@ -293,10 +274,8 @@ log-likelikehood subtraction as pointed out above).
 > * Were these two genes identified in ([Brown and Thomson, 2016])?
 > 
 > * Briefly describe what is the problem of these two genes?
-{: .tip}
 
-7) Removing influential genes
------------------------------
+## 7. Removing influential genes
 
 We now try to construct a tree without these "influential" genes. 
 To do so, copy the partition file `turtle.nex` to a new file and 
@@ -304,8 +283,7 @@ remove the lines defining the `charset` of these genes, and then
 repeat the IQ-TREE run with a parititon model (see section 4).
 You will need to figure out a command line to run IQ-TREE yourself here.
 
-> **QUESTIONS:**
-> 
+**QUESTIONS:**
 > * Document which command line did you use to run IQ-TREE?
 > 
 > * What tree topology do you get now? 
@@ -313,11 +291,8 @@ You will need to figure out a command line to run IQ-TREE yourself here.
 > * What is the ultrafast bootstrap support (%) for the relevant clade?
 > 
 > * Does this tree agree with the published tree ([Chiari et al., 2012])?
-{: .tip}
 
-8) Concordance factors
-----------------------
-<div class="hline"></div>
+## 8. Concordance factors
 
 > This task is optional
 
@@ -336,8 +311,7 @@ Options explained:
   `turtle.nex`. All output files are similar to a partition analysis, except that 
   the tree `turtle.loci.treefile` now contains a set of gene trees.
 
-> __Definitions:__
->
+**Definitions:**
 > * __Gene concordance factor (gCF)__ is the percentage of *decisive* gene trees 
 >   concordant with a particular branch of the species tree (0% <= gCF(b) <= 100%). 
 >   gCF=0% means that branch *b* does not occur in any gene trees, whereas gCF=100% 
@@ -373,8 +347,7 @@ Similarly, you can compute gCF and sCF for the tree under unpartitioned model:
 	iqtree2 -t turtle.fa.treefile --gcf turtle.loci.treefile -s turtle.fa --scf 100
 
 
-> **QUESTIONS:**
-> 
+**QUESTIONS:**
 > * Visualise `turtle.nex.treefile.cf.tree.nex` in FigTree. 
 > 
 > * Explore gene concordance factor (gCF), gene discordance factors (gDF1, gDF2, gDFP), 
@@ -384,12 +357,10 @@ Similarly, you can compute gCF and sCF for the tree under unpartitioned model:
 > 
 > * Visualise `turtle.fa.treefile.cf.tree`. How do these values look like now on the 
 >   contradicting branch?
-{: .tip}
 
-> **FINAL QUESTIONS:**
-> 
-> * Given all analyses you have done in this tutorial, which relationship between 
->   Turtle, Crocodile and Bird is true in your opinion?
+### Final questions  
+* Given all analyses you have done in this tutorial, which relationship between 
+Turtle, Crocodile and Bird is true in your opinion?
 
 [Adachi and Hasegawa, 1996]: http://www.is.titech.ac.jp/~shimo/class/doc/csm96.pdf
 [Anisimova et al., 2011]: https://doi.org/10.1093/sysbio/syr041
