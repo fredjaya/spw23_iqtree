@@ -1,6 +1,20 @@
-# IQ-TREE 2 Workshop Tutorial (Sydney 2023)  
+---
+layout: workshop
+title: "IQ-TREE Workshop Tutorial"
+author: _AUTHOR_
+date: _DATE_
+docid: 100
+tags:
+- workshop
+---
 
-## Table of Contents
+IQ-TREE 2 Workshop Tutorial (Sydney 2023)  
+=========================
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
 - [1) Input data](#1-input-data)
 - [2) Inferring the first phylogeny](#2-inferring-the-first-phylogeny)
 - [3) Applying partition model](#3-applying-partition-model)
@@ -10,7 +24,10 @@
 - [7) Removing influential genes](#7-removing-influential-genes)
 - [8) Concordance factors](#8-concordance-factors)
 
-## Installation  
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<!--more-->
+
 Please [download version 2.2.2.6](https://github.com/iqtree/iqtree2/releases/tag/v2.2.2.6) 
 and [install](../Quickstart) the binary for your platform. 
 For the next steps, the folder containing your `iqtree2` executable should be added to 
@@ -24,7 +41,9 @@ Alternatively, you can also copy `iqtree2` binary into your system
 search or use the full path to the executable.  
 
 
-## 1. Input data
+1) Input data
+-------------
+<div class="hline"></div>
 
 We will use a Turtle data set to demonstrate the use of IQ-TREE throughout this workshop 
 tutorial. We try to resolve a once hotly debated phylogenetic position of Turtles, 
@@ -43,15 +62,19 @@ Download the following files:
 * [turtle.nex](data/turtle.nex): The partition file (in NEXUS format) defining 29 genes, 
   which are a subset of the published 248 genes ([Chiari et al., 2012]).
 
-**QUESTIONS:**
+> **QUESTIONS:**
+> 
 > * View the alignment in Aliview or your favourite alignment viewer.
 > 
 > * Can you identify the gene boundary from the viewer? Does it roughly match the partition file?
 > 
 > * Is there missing data? Do you think if missing data can be problematic?
+{: .tip}
 
 
-## 3. Inferring the first phylogeny
+2) Inferring the first phylogeny
+--------------------------------
+<div class="hline"></div>
  
 You can now start to reconstruct a maximum-likelihood (ML) tree
 for the Turtle data set (assuming that you are in the same folder where the alignment is 
@@ -61,25 +84,42 @@ stored).
 > the alignment file `turtle.fa` as input, performs 1000 ultrafast bootstrap replicates,
 > and automatically determines the best number of cores to use (`-T AUTO` option)?
 
-<details>
-<summary>Show me the code:</summary>  
+<script type="text/javascript">
+function myFunction(buttonid, commandid) {
+  var x = document.getElementById(commandid);
+  var y = document.getElementById(buttonid);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.innerText = "Hide the command line";
+  } else {
+    x.style.display = "none";
+    y.innerText = "Show me the command line";
+  }
+}
+</script>
 
-```
-iqtree2 -s turtle.fa -B 1000 -T AUTO
-```  
+<button type="button" class="btn btn-primary" id="button2" onclick="myFunction('button2','command2')">
+Show me the command line</button>
+<div id="command2" style="display: none; border:1px solid gray;">
+
+<pre><code>iqtree2 -s turtle.fa -B 1000 -T AUTO</code></pre>
 
 Options explained:
-`-s turtle.fa` to specify the input alignment as `turtle.fa`.
-`-B 1000` to specify 1000 replicates for the ultrafast bootstrap ([Minh et al., 2013]).
-`-T AUTO` to determine the best number of CPU cores to speed up the analysis.
+<ul>
+<li>`-s turtle.fa` to specify the input alignment as `turtle.fa`.</li>
+<li>`-B 1000` to specify 1000 replicates for the ultrafast bootstrap ([Minh et al., 2013]).</li>
+<li>`-T AUTO` to determine the best number of CPU cores to speed up the analysis.</li>
+</ul>
 
 This simple command will perform three important steps in one go:
 
-Select best-fit model using ModelFinder ([Kalyaanamoorthy et al., 2017]).
-Reconstruct the ML tree using the IQ-TREE search algorithm ([Nguyen et al., 2015]).
-Assess branch supports using the ultrafast bootstrap - UFBoot ([Minh et al., 2013]).
-</details>  
+<ol>
+<li>Select best-fit model using ModelFinder ([Kalyaanamoorthy et al., 2017]).</li>
+<li>Reconstruct the ML tree using the IQ-TREE search algorithm ([Nguyen et al., 2015]).</li>
+<li>Assess branch supports using the ultrafast bootstrap - UFBoot ([Minh et al., 2013]).</li>
+</ol>
 
+</div>
 
 Once the run is done, IQ-TREE will write several output files including:
 
@@ -92,7 +132,8 @@ Once the run is done, IQ-TREE will write several output files including:
 * `turtle.fa.ckp.gz`: checkpoint file used to resume an interrupted analysis.
 * And a few other files.
 
-**QUESTIONS:**
+> **QUESTIONS:**
+> 
 > * Look at the report file `turtle.fa.iqtree`. 
 > 
 > * What is the best-fit model name? What do you know about this model? (see [substitution models](../Substitution-Models) available in IQ-TREE)
@@ -104,6 +145,8 @@ Once the run is done, IQ-TREE will write several output files including:
 > * What is the ultrafast bootstrap support (%) for the relevant clade?
 > 
 > * Does this tree agree with the published tree ([Chiari et al., 2012])?
+{: .tip}
+
 
 3) Applying partition model
 ---------------------------
@@ -125,10 +168,11 @@ Show me the command line</button>
 
 Options explained:
 
-`-p turtle.nex` to specify an *edge-linked proportional* partition model 
+<ul>
+<li>`-p turtle.nex` to specify an *edge-linked proportional* partition model 
   ([Chernomor et al., 2016]). That means, there is one set of branch lengths. 
   But each partition can have proportionally shorter or longer tree length, 
-  representing slow or fast evolutionary rate, respectively.
+  representing slow or fast evolutionary rate, respectively.</li>
 </ul>
 
 </div>
@@ -173,9 +217,9 @@ Show me the command line</button>
 Options explained:
 
 <ul>
-`-m MFP+MERGE` to perform PartitionFinder followed by tree reconstruction.
-`-rcluster 10` to reduce computations by only examining the top 10% partitioning 
-  schemes using the *relaxed clustering algorithm* ([Lanfear et al., 2014]). 
+<li>`-m MFP+MERGE` to perform PartitionFinder followed by tree reconstruction.</li>
+<li>`-rcluster 10` to reduce computations by only examining the top 10% partitioning 
+  schemes using the *relaxed clustering algorithm* ([Lanfear et al., 2014]). </li>
 </ul>
 
 </div>
@@ -241,11 +285,11 @@ Show me the command line</button>
 Options explained:	
 
 <ul>	
-`BEST_MODEL_NAME` is the model string found in step 2, that you need to replace with for
-  this command line to run properly.
-`-te` is to specify a file containing the set of trees for the MAST model. 
+<li>`BEST_MODEL_NAME` is the model string found in step 2, that you need to replace with for
+  this command line to run properly.</li>
+<li>`-te` is to specify a file containing the set of trees for the MAST model. 
   Currently, MAST only accepts a set of fixed tree topologies provided by the users. 
-  It doesn't yet have the ability to automatically find the optimal trees.
+  It doesn't yet have the ability to automatically find the optimal trees.</li>
 </ul>
 
 </div>
