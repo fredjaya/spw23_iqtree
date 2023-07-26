@@ -1,0 +1,742 @@
+IQ-TREE multicore version 2.2.2.6 COVID-edition for Linux 64-bit built May 27 2023
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    rsb-072749 (AVX2, FMA3, 62 GB RAM)
+Command: /home/frederickjaya/Downloads/iqtree-2.2.2.6-Linux/bin/iqtree2 -s ../data/turtle.fa -p ../data/turtle.nex -pre turtle.nex -B 1000 -T AUTO -m MFP+MERGE -rcluster 10 -pre turtle.merge
+Seed:    696882 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 26 17:53:45 2023
+Kernel:  AVX+FMA - auto-detect threads (20 CPU cores detected)
+
+Reading partition model file ../data/turtle.nex ...
+Reading alignment file ../data/turtle.fa ... Fasta format detected
+Reading fasta file: done in 0.00366282 secs using 86.41% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.017796 secs using 1749% CPU
+Alignment has 16 sequences with 20820 columns, 8574 distinct patterns
+6084 parsimony-informative, 3551 singleton sites, 11185 constant sites
+                   Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000105143 secs using 1794% CPU
+   1  protopterus         67.26%    failed      0.00%
+   2  Anolis               1.61%    passed     48.30%
+   3  Gallus               0.01%    passed     11.30%
+   4  Homo                 0.29%    passed     68.82%
+   5  Monodelphis          0.46%    failed      0.21%
+   6  Ornithorhynchus      3.73%    failed      0.00%
+   7  Taeniopygia          2.10%    failed      0.00%
+   8  Xenopus              1.50%    passed     27.31%
+   9  alligator           80.50%    passed     19.63%
+  10  emys_orbicularis    56.95%    passed     71.94%
+  11  phrynops            36.77%    passed     17.20%
+  12  caiman              41.06%    passed      5.16%
+  13  caretta             36.33%    passed      6.75%
+  14  python              65.18%    failed      0.00%
+  15  chelonoidis_nigra   68.53%    failed      0.77%
+  16  podarcis            76.21%    failed      0.14%
+WARNING: 6 sequences contain more than 50% gaps/ambiguity
+****  TOTAL               33.66%  7 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 29 partitions...
+Identifying sites to remove: done in 0.000272989 secs using 1854% CPU
+Identifying sites to remove: done in 0.000175953 secs using 1994% CPU
+Identifying sites to remove: done in 0.000202894 secs using 1954% CPU
+Identifying sites to remove: done in 0.000232935 secs using 1882% CPU
+Identifying sites to remove: done in 0.000302076 secs using 1900% CPU
+Identifying sites to remove: done in 0.00026989 secs using 1880% CPU
+Identifying sites to remove: done in 0.000446081 secs using 1875% CPU
+Identifying sites to remove: done in 0.000164032 secs using 1915% CPU
+Identifying sites to remove: done in 0.000188828 secs using 1921% CPU
+Identifying sites to remove: done in 0.000216007 secs using 1949% CPU
+Identifying sites to remove: done in 0.000169992 secs using 2028% CPU
+Identifying sites to remove: done in 0.000252962 secs using 1926% CPU
+Identifying sites to remove: done in 0.000156879 secs using 2023% CPU
+Identifying sites to remove: done in 0.000195026 secs using 2016% CPU
+Identifying sites to remove: done in 0.000296116 secs using 1996% CPU
+Identifying sites to remove: done in 0.000222921 secs using 1987% CPU
+Identifying sites to remove: done in 0.00029397 secs using 2033% CPU
+Identifying sites to remove: done in 0.000141144 secs using 1977% CPU
+Identifying sites to remove: done in 0.000296831 secs using 1990% CPU
+Identifying sites to remove: done in 0.000148058 secs using 1991% CPU
+Identifying sites to remove: done in 0.000255823 secs using 2013% CPU
+Identifying sites to remove: done in 0.000164986 secs using 1962% CPU
+Identifying sites to remove: done in 0.000187874 secs using 2036% CPU
+Identifying sites to remove: done in 0.000381947 secs using 1994% CPU
+Identifying sites to remove: done in 0.000169039 secs using 1916% CPU
+Identifying sites to remove: done in 0.000148058 secs using 2004% CPU
+Identifying sites to remove: done in 0.000205994 secs using 1998% CPU
+Identifying sites to remove: done in 0.000208855 secs using 2008% CPU
+Identifying sites to remove: done in 0.000237942 secs using 1971% CPU
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		11	846	282	382	MFP+MERGE	ENSGALG00000000223.macse_DNA_gb
+2		10	522	193	227	MFP+MERGE	ENSGALG00000001529.macse_DNA_gb
+3		10	672	194	351	MFP+MERGE	ENSGALG00000002002.macse_DNA_gb
+4		14	732	222	422	MFP+MERGE	ENSGALG00000002514.macse_DNA_gb
+5		15	966	313	556	MFP+MERGE	ENSGALG00000003337.macse_DNA_gb
+6		14	885	257	525	MFP+MERGE	ENSGALG00000003700.macse_DNA_gb
+7		10	1545	359	833	MFP+MERGE	ENSGALG00000003702.macse_DNA_gb
+8		12	480	176	225	MFP+MERGE	ENSGALG00000003907.macse_DNA_gb
+9		12	576	176	318	MFP+MERGE	ENSGALG00000005820.macse_DNA_gb
+10		15	696	129	483	MFP+MERGE	ENSGALG00000005834.macse_DNA_gb
+11		13	570	124	334	MFP+MERGE	ENSGALG00000005902.macse_DNA_gb
+12		12	792	283	334	MFP+MERGE	ENSGALG00000008338.macse_DNA_gb
+13		11	540	129	329	MFP+MERGE	ENSGALG00000008517.macse_DNA_gb
+14		12	546	231	262	MFP+MERGE	ENSGALG00000008916.macse_DNA_gb
+15		11	930	243	547	MFP+MERGE	ENSGALG00000009085.macse_DNA_gb
+16		13	597	239	261	MFP+MERGE	ENSGALG00000009879.macse_DNA_gb
+17		9	900	290	406	MFP+MERGE	ENSGALG00000011323.macse_DNA_gb
+18		10	447	201	211	MFP+MERGE	ENSGALG00000011434.macse_DNA_gb
+19		12	981	172	659	MFP+MERGE	ENSGALG00000011917.macse_DNA_gb
+20		10	468	169	191	MFP+MERGE	ENSGALG00000011966.macse_DNA_gb
+21		13	753	233	387	MFP+MERGE	ENSGALG00000012244.macse_DNA_gb
+22		13	519	149	292	MFP+MERGE	ENSGALG00000012379.macse_DNA_gb
+23		9	630	158	382	MFP+MERGE	ENSGALG00000012568.macse_DNA_gb
+24		10	1302	279	815	MFP+MERGE	ENSGALG00000013227.macse_DNA_gb
+25		11	561	176	297	MFP+MERGE	ENSGALG00000014038.macse_DNA_gb
+26		9	498	96	314	MFP+MERGE	ENSGALG00000014648.macse_DNA_gb
+27		10	597	187	238	MFP+MERGE	ENSGALG00000015326.macse_DNA_gb
+28		12	594	175	281	MFP+MERGE	ENSGALG00000015397.macse_DNA_gb
+29		13	675	249	323	MFP+MERGE	ENSGALG00000016241.macse_DNA_gb
+Degree of missing data: 0.276
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.007 seconds
+Measuring multi-threading efficiency up to 20 CPU cores
+Increase to 10 rounds for branch lengths
+252 trees examined
+Threads: 1 / Time: 20.077 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -126965
+Threads: 2 / Time: 11.490 sec / Speedup: 1.747 / Efficiency: 87% / LogL: -126965
+Threads: 3 / Time: 8.524 sec / Speedup: 2.355 / Efficiency: 79% / LogL: -126965
+Threads: 4 / Time: 6.905 sec / Speedup: 2.908 / Efficiency: 73% / LogL: -126965
+Threads: 5 / Time: 5.990 sec / Speedup: 3.352 / Efficiency: 67% / LogL: -126965
+Threads: 6 / Time: 5.303 sec / Speedup: 3.786 / Efficiency: 63% / LogL: -126965
+Threads: 7 / Time: 5.041 sec / Speedup: 3.983 / Efficiency: 57% / LogL: -126965
+Threads: 8 / Time: 4.757 sec / Speedup: 4.221 / Efficiency: 53% / LogL: -126965
+Threads: 9 / Time: 5.551 sec / Speedup: 3.617 / Efficiency: 40% / LogL: -126965
+Determining AUTO threadcount: done in 73.6376 secs using 386.9% CPU
+BEST NUMBER OF THREADS: 8
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Initial log-likelihood: -120782.688
+Current log-likelihood at step 1: -115484.010
+Current log-likelihood at step 2: -115369.614
+Current log-likelihood at step 3: -115366.416
+Parameters optimization took 2 rounds (0.096 sec)
+
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.0218499 secs using 889.8% CPU
+Estimate model parameters (epsilon = 1.000)
+Initial log-likelihood: -115363.292
+Current log-likelihood at step 1: -115358.294
+Current log-likelihood at step 2: -115356.238
+Current log-likelihood at step 3: -115354.618
+Current log-likelihood at step 4: -115352.863
+Current log-likelihood at step 5: -115350.938
+Current log-likelihood at step 6: -115348.806
+Current log-likelihood at step 7: -115346.461
+Current log-likelihood at step 8: -115343.924
+Current log-likelihood at step 9: -115341.558
+Current log-likelihood at step 10: -115339.557
+Current log-likelihood at step 11: -115337.788
+Current log-likelihood at step 12: -115336.155
+Current log-likelihood at step 13: -115334.463
+Current log-likelihood at step 14: -115332.644
+Current log-likelihood at step 15: -115330.658
+Current log-likelihood at step 16: -115328.579
+Current log-likelihood at step 17: -115326.631
+Current log-likelihood at step 18: -115324.977
+Current log-likelihood at step 19: -115323.548
+Current log-likelihood at step 20: -115322.235
+Current log-likelihood at step 21: -115321.073
+Current log-likelihood at step 22: -115320.040
+Current log-likelihood at step 23: -115319.326
+Partition-specific rates:  1.098 1.334 1.063 1.018 1.252 0.767 0.876 1.106 0.783 0.479 0.646 1.058 0.695 1.810 1.022 1.204 1.273 1.913 0.596 1.323 1.148 1.002 0.805 0.691 0.911 0.657 1.131 0.976 1.260
+Parameters optimization took 22 rounds (0.219 sec)
+
+Time for fast ML tree search: 0.338 seconds
+
+NOTE: ModelFinder requires 26 MB RAM!
+Selecting individual models for 29 charsets using BIC...
+ No. Model        Score       TreeLen     Charset
+   1 GTR+F+I+G4   8405.587    2.288       ENSGALG00000009879.macse_DNA_gb
+   2 GTR+F+I+G4   10244.462   2.001       ENSGALG00000000223.macse_DNA_gb
+   3 GTR+F+I+G4   8645.617    1.947       ENSGALG00000002514.macse_DNA_gb
+   4 GTR+F+I+G4   10396.424   2.001       ENSGALG00000008338.macse_DNA_gb
+   5 GTR+F+I+G4   15338.235   1.302       ENSGALG00000003702.macse_DNA_gb
+   6 GTR+F+I+G4   9509.100    1.501       ENSGALG00000003700.macse_DNA_gb
+   7 GTR+F+I+G4   12518.333   2.512       ENSGALG00000003337.macse_DNA_gb
+   8 GTR+F+I+G4   8800.276    1.837       ENSGALG00000012244.macse_DNA_gb
+   9 GTR+F+I+G4   8832.699    2.092       ENSGALG00000016241.macse_DNA_gb
+  10 GTR+F+I+G4   11212.089   1.080       ENSGALG00000013227.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  11 GTR+F+I+G4   10585.878   1.859       ENSGALG00000011323.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  12 GTR+F+I+G4   9150.784    1.622       ENSGALG00000009085.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  13 GTR+F+I+G4   6146.001    0.964       ENSGALG00000005834.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  14 GTR+F+I+G4   7334.605    1.606       ENSGALG00000015397.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  15 GTR+F+I+G4   8247.359    0.930       ENSGALG00000011917.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  16 GTR+F+I+G4   6273.422    1.443       ENSGALG00000005820.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  17 GTR+F+I+G4   5798.231    1.611       ENSGALG00000012379.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  18 GTR+F+I+G4   7556.784    1.717       ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  19 GTR+F+I+G4   6880.647    2.083       ENSGALG00000001529.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  20 GTR+F+I+G4   6690.625    1.745       ENSGALG00000014038.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  21 GTR+F+I+G4   7282.145    1.579       ENSGALG00000002002.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  22 GTR+F+I+G4   7390.057    2.713       ENSGALG00000008916.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  23 GTR+F+I+G4   5968.251    1.755       ENSGALG00000003907.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  24 GTR+F+I+G4   5784.668    1.198       ENSGALG00000005902.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  25 GTR+F+I+G4   4258.932    0.954       ENSGALG00000014648.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  26 GTR+F+I+G4   6122.023    2.840       ENSGALG00000011434.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  27 GTR+F+I+G4   5994.945    1.965       ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  28 GTR+F+I+G4   5889.268    1.175       ENSGALG00000012568.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  29 GTR+F+I+G4   5462.316    1.320       ENSGALG00000008517.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Full partition model BIC score: 234088.007 (LnL: -115318.777  df:347)
+Merging models to increase model fit (about 113 total partition schemes)...
+  30 GTR+F+I+G4   234096.783  1.938       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000008338.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  31 GTR+F+I+G4   234042.766  2.285       ENSGALG00000008338.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  32 GTR+F+I+G4   234018.114  1.705       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  33 GTR+F+I+G4   233998.045  2.031       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000008338.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  34 GTR+F+I+G4   233996.773  2.369       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  35 GTR+F+I+G4   234024.567  2.190       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  36 GTR+F+I+G4   233996.679  2.320       ENSGALG00000001529.macse_DNA_gb+ENSGALG00000008338.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  37 GTR+F+I+G4   234045.792  2.031       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000002514.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  38 GTR+F+I+G4   234049.026  2.240       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  39 GTR+F+I+G4   234003.546  1.662       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  40 GTR+F+I+G4   234012.667  1.496       ENSGALG00000003702.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  41 GTR+F+I+G4   233992.578  2.168       ENSGALG00000008338.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  42 GTR+F+I+G4   234007.816  1.784       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  43 GTR+F+I+G4   234064.386  1.704       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000003700.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  44 GTR+F+I+G4   234010.265  1.961       ENSGALG00000011323.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  45 GTR+F+I+G4   233991.161  2.318       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  46 GTR+F+I+G4   234009.475  1.526       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000005820.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  47 GTR+F+I+G4   233994.602  2.150       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  48 GTR+F+I+G4   234010.090  2.039       ENSGALG00000012244.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  49 GTR+F+I+G4   234007.606  2.136       ENSGALG00000001529.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  50 GTR+F+I+G4   234046.536  1.613       ENSGALG00000003702.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  51 GTR+F+I+G4   234065.450  2.128       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  52 GTR+F+I+G4   234133.733  1.659       ENSGALG00000009085.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  53 GTR+F+I+G4   233986.171  1.926       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  54 GTR+F+I+G4   233993.612  1.605       ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  55 GTR+F+I+G4   234005.826  1.597       ENSGALG00000009085.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  56 GTR+F+I+G4   234006.404  2.131       ENSGALG00000011966.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  57 GTR+F+I+G4   233999.472  1.088       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  58 GTR+F+I+G4   234073.197  1.712       ENSGALG00000015326.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  59 GTR+F+I+G4   233999.081  1.905       ENSGALG00000011323.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  60 GTR+F+I+G4   234063.737  1.119       ENSGALG00000012568.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  61 GTR+F+I+G4   234039.088  1.828       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  62 GTR+F+I+G4   234034.731  1.615       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  63 GTR+F+I+G4   234003.932  1.624       ENSGALG00000012379.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  64 GTR+F+I+G4   234018.916  2.172       ENSGALG00000011323.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  65 GTR+F+I+G4   234026.364  1.651       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  66 GTR+F+I+G4   234076.620  1.743       ENSGALG00000012379.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  67 GTR+F+I+G4   234007.498  1.928       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  68 GTR+F+I+G4   234011.667  1.629       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  69 GTR+F+I+G4   234094.548  1.983       ENSGALG00000014038.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  70 GTR+F+I+G4   233991.091  2.108       ENSGALG00000001529.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  71 GTR+F+I+G4   234050.277  2.692       ENSGALG00000008916.macse_DNA_gb+ENSGALG00000011434.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  72 GTR+F+I+G4   234020.595  1.110       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  73 GTR+F+I+G4   234000.875  1.328       ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  74 GTR+F+I+G4   234013.823  0.974       ENSGALG00000011917.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb with BIC score: 233986.171 (LnL: -115322.549  df: 336)
+  75 GTR+F+I+G4   233898.173  1.961       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  76 GTR+F+I+G4   233894.828  2.263       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  77 GTR+F+I+G4   233927.194  2.267       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000008338.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  78 GTR+F+I+G4   233916.347  1.902       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  79 GTR+F+I+G4   233953.289  2.312       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000001529.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb with BIC score: 233889.254 (LnL: -115328.781  df: 325)
+  80 GTR+F+I+G4   233879.637  1.833       ENSGALG00000012244.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  81 GTR+F+I+G4   233797.261  2.394       ENSGALG00000001529.macse_DNA_gb+ENSGALG00000008338.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  82 GTR+F+I+G4   233814.780  2.151       ENSGALG00000001529.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  83 GTR+F+I+G4   233794.791  2.372       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb with BIC score: 233794.791 (LnL: -115336.240  df: 314)
+  84 GTR+F+I+G4   233703.632  1.859       ENSGALG00000009085.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  85 GTR+F+I+G4   233704.420  1.725       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  86 GTR+F+I+G4   233718.703  1.298       ENSGALG00000005902.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  87 GTR+F+I+G4   233723.761  1.235       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  88 GTR+F+I+G4   233760.807  2.857       ENSGALG00000003337.macse_DNA_gb+ENSGALG00000008916.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  89 GTR+F+I+G4   233745.870  2.415       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  90 GTR+F+I+G4   233727.706  2.275       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  91 GTR+F+I+G4   233799.739  2.461       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000003337.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb with BIC score: 233700.396 (LnL: -115343.732  df: 303)
+  92 GTR+F+I+G4   233634.821  1.285       ENSGALG00000005902.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  93 GTR+F+I+G4   233638.838  1.455       ENSGALG00000005820.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  94 GTR+F+I+G4   233763.050  1.674       ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  95 GTR+F+I+G4   233647.336  1.614       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  96 GTR+F+I+G4   233620.634  1.620       ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  97 GTR+F+I+G4   233612.693  2.040       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+  98 GTR+F+I+G4   233614.665  1.776       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb with BIC score: 233611.861 (LnL: -115354.155  df: 292)
+  99 GTR+F+I+G4   233549.837  1.212       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 100 GTR+F+I+G4   233590.182  1.214       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 101 GTR+F+I+G4   233533.377  1.143       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb with BIC score: 233524.158 (LnL: -115364.994  df: 281)
+ 102 GTR+F+I+G4   233482.468  2.338       ENSGALG00000003907.macse_DNA_gb+ENSGALG00000008338.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 103 GTR+F+I+G4   233487.939  2.360       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb with BIC score: 233437.026 (LnL: -115376.118  df: 270)
+ 104 GTR+F+I+G4   233364.699  1.384       ENSGALG00000005820.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 105 GTR+F+I+G4   233383.512  1.488       ENSGALG00000003702.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 106 GTR+F+I+G4   233413.445  1.372       ENSGALG00000005902.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb with BIC score: 233351.296 (LnL: -115387.943  df: 259)
+ 107 GTR+F+I+G4   233279.603  1.074       ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 108 GTR+F+I+G4   233466.162  1.884       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 109 GTR+F+I+G4   233300.762  1.891       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+ 110 GTR+F+I+G4   233261.465  1.777       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb	0h:0m:0s (0h:0m:0s left)
+Merging ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb with BIC score: 233261.465 (LnL: -115397.718  df: 248)
+ 111 GTR+F+I+G4   233202.967  1.679       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+ 112 GTR+F+I+G4   233193.800  1.148       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+ 113 GTR+F+I+G4   233379.214  1.874       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+ 114 GTR+F+I+G4   233209.382  1.873       ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000005820.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb with BIC score: 233189.139 (LnL: -115416.245  df: 237)
+ 115 GTR+F+I+G4   233157.028  1.424       ENSGALG00000005820.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+ 116 GTR+F+I+G4   233132.441  1.498       ENSGALG00000003702.macse_DNA_gb+ENSGALG00000005820.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb with BIC score: 233117.446 (LnL: -115435.088  df: 226)
+ 117 GTR+F+I+G4   233056.160  1.232       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000002514.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb with BIC score: 233054.006 (LnL: -115458.059  df: 215)
+ 118 GTR+F+I+G4   233008.016  2.346       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+ 119 GTR+F+I+G4   233039.900  2.246       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000002002.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb with BIC score: 232992.363 (LnL: -115481.927  df: 204)
+ 120 GTR+F+I+G4   232963.467  1.714       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+ 121 GTR+F+I+G4   232947.613  1.870       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb with BIC score: 232931.077 (LnL: -115505.974  df: 193)
+ 122 GTR+F+I+G4   232841.185  1.255       ENSGALG00000005834.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+ 123 GTR+F+I+G4   232941.776  1.397       ENSGALG00000003702.macse_DNA_gb+ENSGALG00000005834.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000005834.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb with BIC score: 232841.185 (LnL: -115515.719  df: 182)
+ 124 GTR+F+I+G4   232860.902  1.396       ENSGALG00000003702.macse_DNA_gb+ENSGALG00000005834.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000003702.macse_DNA_gb+ENSGALG00000005820.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb with BIC score: 232784.488 (LnL: -115542.060  df: 171)
+Merging ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb with BIC score: 232735.566 (LnL: -115572.290  df: 160)
+ 125 GTR+F+I+G4   232763.149  2.419       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000003337.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb	0h:0m:1s (0h:0m:0s left)
+Merging ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb with BIC score: 232689.577 (LnL: -115603.985  df: 149)
+ 126 GTR+F+I+G4   232681.785  2.342       ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003337.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:2s (0h:0m:0s left)
+ 127 GTR+F+I+G4   232637.204  2.367       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:2s (0h:0m:0s left)
+Merging ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb with BIC score: 232637.204 (LnL: -115632.489  df: 138)
+ 128 GTR+F+I+G4   232652.584  2.361       ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003337.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:2s (0h:0m:0s left)
+Merging ENSGALG00000002002.macse_DNA_gb+ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb with BIC score: 232592.454 (LnL: -115664.804  df: 127)
+ 129 GTR+F+I+G4   232610.603  1.889       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000003700.macse_DNA_gb+ENSGALG00000008338.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:2s (0h:0m:0s left)
+ 130 GTR+F+I+G4   232674.752  1.905       ENSGALG00000002002.macse_DNA_gb+ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb+ENSGALG00000015326.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:2s (0h:0m:0s left)
+Merging ENSGALG00000008916.macse_DNA_gb+ENSGALG00000011434.macse_DNA_gb with BIC score: 232554.723 (LnL: -115700.629  df: 116)
+ 131 GTR+F+I+G4   232519.350  3.077       ENSGALG00000003337.macse_DNA_gb+ENSGALG00000008916.macse_DNA_gb+ENSGALG00000011434.macse_DNA_gb	0h:0m:2s (0h:0m:0s left)
+Merging ENSGALG00000003337.macse_DNA_gb+ENSGALG00000008916.macse_DNA_gb+ENSGALG00000011434.macse_DNA_gb with BIC score: 232519.350 (LnL: -115737.632  df: 105)
+Agglomerative model selection: ((((ENSGALG00000000223.macse_DNA_gb,(ENSGALG00000001529.macse_DNA_gb,ENSGALG00000011966.macse_DNA_gb)2:233889)3:233795,ENSGALG00000009879.macse_DNA_gb)17:232736,((ENSGALG00000002514.macse_DNA_gb,ENSGALG00000012244.macse_DNA_gb)12:233054,((ENSGALG00000003907.macse_DNA_gb,ENSGALG00000011323.macse_DNA_gb)1:233986,ENSGALG00000016241.macse_DNA_gb)6:233524)18:232690)19:232637,((ENSGALG00000002002.macse_DNA_gb,ENSGALG00000015397.macse_DNA_gb)13:232992,((ENSGALG00000003700.macse_DNA_gb,(ENSGALG00000009085.macse_DNA_gb,ENSGALG00000012379.macse_DNA_gb)4:233700)8:233351,ENSGALG00000014038.macse_DNA_gb)9:233261)20:232592,(ENSGALG00000003337.macse_DNA_gb,(ENSGALG00000008916.macse_DNA_gb,ENSGALG00000011434.macse_DNA_gb)21:232555)22:232519,(ENSGALG00000003702.macse_DNA_gb,(ENSGALG00000005820.macse_DNA_gb,(ENSGALG00000005902.macse_DNA_gb,ENSGALG00000012568.macse_DNA_gb)7:233437)10:233189)16:232784,(((ENSGALG00000005834.macse_DNA_gb,ENSGALG00000011917.macse_DNA_gb)5:233612,(ENSGALG00000013227.macse_DNA_gb,ENSGALG00000014648.macse_DNA_gb)11:233117)14:232931,ENSGALG00000008517.macse_DNA_gb)15:232841,ENSGALG00000008338.macse_DNA_gb,ENSGALG00000015326.macse_DNA_gb)
+Merging into 7 partitions...
+ 132 GTR+F+I+G4   74096.664   ENSGALG00000000223.macse_DNA_gb+ENSGALG00000001529.macse_DNA_gb+ENSGALG00000002514.macse_DNA_gb+ENSGALG00000003907.macse_DNA_gb+ENSGALG00000009879.macse_DNA_gb+ENSGALG00000011323.macse_DNA_gb+ENSGALG00000011966.macse_DNA_gb+ENSGALG00000012244.macse_DNA_gb+ENSGALG00000016241.macse_DNA_gb	0h:0m:5s (0h:0m:-1s left)
+ 133 GTR+F+I+G4   45597.616   ENSGALG00000002002.macse_DNA_gb+ENSGALG00000003700.macse_DNA_gb+ENSGALG00000009085.macse_DNA_gb+ENSGALG00000012379.macse_DNA_gb+ENSGALG00000014038.macse_DNA_gb+ENSGALG00000015397.macse_DNA_gb	0h:0m:14s (0h:0m:-3s left)
+ 134 TIM2+F+G4    35173.550   ENSGALG00000005834.macse_DNA_gb+ENSGALG00000008517.macse_DNA_gb+ENSGALG00000011917.macse_DNA_gb+ENSGALG00000013227.macse_DNA_gb+ENSGALG00000014648.macse_DNA_gb	0h:0m:15s (0h:0m:-3s left)
+ 135 TIM3+F+I+G4  33180.144   ENSGALG00000003702.macse_DNA_gb+ENSGALG00000005820.macse_DNA_gb+ENSGALG00000005902.macse_DNA_gb+ENSGALG00000012568.macse_DNA_gb	0h:0m:15s (0h:0m:-3s left)
+ 136 TVMe+I+G4    26028.166   ENSGALG00000003337.macse_DNA_gb+ENSGALG00000008916.macse_DNA_gb+ENSGALG00000011434.macse_DNA_gb	0h:0m:16s (0h:0m:-3s left)
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 137 TPM3+G4      10371.334   ENSGALG00000008338.macse_DNA_gb	0h:0m:18s (0h:0m:-4s left)
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 138 TIM+F+G4     7539.041    ENSGALG00000015326.macse_DNA_gb	0h:0m:18s (0h:0m:-4s left)
+Best partition model BIC score: 232384.103 (LnL: -115764.474  df:86)
+Partition information was printed to turtle.merge.best_scheme.nex
+Partition information in Raxml format was printed to turtle.merge.best_scheme
+
+All model information printed to turtle.merge.model.gz
+CPU time for ModelFinder: 432.828 seconds (0h:7m:12s)
+Wall-clock time for ModelFinder: 92.269 seconds (0h:1m:32s)
+Generating 1000 samples for ultrafast bootstrap (seed: 696882)...
+
+NOTE: 51 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -115780.829
+Current log-likelihood at step 1: -115763.403
+Current log-likelihood at step 2: -115762.666
+Current log-likelihood at step 3: -115762.484
+Current log-likelihood at step 4: -115762.320
+Current log-likelihood at step 5: -115762.164
+Current log-likelihood at step 6: -115762.026
+Current log-likelihood at step 7: -115761.888
+Current log-likelihood at step 8: -115761.758
+Current log-likelihood at step 9: -115761.633
+Current log-likelihood at step 10: -115761.522
+Current log-likelihood at step 11: -115761.410
+Current log-likelihood at step 12: -115761.291
+Current log-likelihood at step 13: -115761.189
+Current log-likelihood at step 14: -115761.095
+Partition-specific rates:  1.192 0.944 1.548 0.819 0.619 1.062 1.158
+Parameters optimization took 13 rounds (0.252 sec)
+
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 5.60284e-05 secs using 606.8% CPU
+Computing ML distances took 0.000090 sec (of wall-clock time) 0.000537 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 3.50475e-05 secs using 1278% CPU
+Constructing RapidNJ tree: done in 0.000246048 secs using 356.4% CPU
+Computing RapidNJ tree took 0.000319 sec (of wall-clock time) 0.001746 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -120471.315
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.545 second
+Computing log-likelihood of 98 initial trees ... 0.557 seconds
+Current best score: -115761.095
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.044121 secs using 798.1% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -115761.095
+Current log-likelihood at step 1: -115761.007
+Parameters optimization took 0 rounds (0.016 sec)
+
+BETTER TREE FOUND at iteration 1: -115761.007
+Optimizing NNI: done in 0.119973 secs using 799.9% CPU
+Optimizing NNI: done in 0.130227 secs using 797% CPU
+Optimizing NNI: done in 0.135711 secs using 800% CPU
+Optimizing NNI: done in 0.130859 secs using 796.5% CPU
+Optimizing NNI: done in 0.12731 secs using 797.9% CPU
+Optimizing NNI: done in 0.205252 secs using 799.5% CPU
+Optimizing NNI: done in 0.0910399 secs using 800.1% CPU
+Optimizing NNI: done in 0.172735 secs using 800.7% CPU
+Optimizing NNI: done in 0.167703 secs using 801.1% CPU
+Iteration 10 / LogL: -115781.867 / Time: 0h:0m:2s
+Optimizing NNI: done in 0.191078 secs using 792.5% CPU
+Optimizing NNI: done in 0.133691 secs using 799.2% CPU
+Optimizing NNI: done in 0.15145 secs using 798.1% CPU
+Optimizing NNI: done in 0.193576 secs using 802.3% CPU
+Optimizing NNI: done in 0.161527 secs using 799.1% CPU
+Optimizing NNI: done in 0.20182 secs using 804.6% CPU
+Optimizing NNI: done in 0.149545 secs using 800.1% CPU
+Optimizing NNI: done in 0.164135 secs using 800.8% CPU
+Optimizing NNI: done in 0.147182 secs using 800.1% CPU
+Optimizing NNI: done in 0.140801 secs using 800.7% CPU
+Iteration 20 / LogL: -115761.080 / Time: 0h:0m:4s
+Finish initializing candidate tree set (1)
+Current best tree score: -115761.007 / CPU time: 4.101
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 0.0890498 secs using 796.6% CPU
+Optimizing NNI: done in 0.0641251 secs using 797.3% CPU
+Optimizing NNI: done in 0.071182 secs using 790.8% CPU
+Optimizing NNI: done in 0.153679 secs using 796.6% CPU
+Optimizing NNI: done in 0.13845 secs using 800.2% CPU
+Optimizing NNI: done in 0.118143 secs using 793.1% CPU
+Optimizing NNI: done in 0.078886 secs using 805.5% CPU
+Optimizing NNI: done in 0.108288 secs using 785.5% CPU
+Optimizing NNI: done in 0.127586 secs using 795.3% CPU
+Optimizing NNI: done in 0.088362 secs using 797.1% CPU
+Iteration 30 / LogL: -115784.552 / Time: 0h:0m:5s (0h:0m:13s left)
+Optimizing NNI: done in 0.068336 secs using 728.2% CPU
+Optimizing NNI: done in 0.0837409 secs using 787.4% CPU
+Optimizing NNI: done in 0.0858331 secs using 782.8% CPU
+Optimizing NNI: done in 0.0910192 secs using 801.4% CPU
+Optimizing NNI: done in 0.102541 secs using 809.9% CPU
+Optimizing NNI: done in 0.0686021 secs using 793.8% CPU
+Optimizing NNI: done in 0.0597291 secs using 782.5% CPU
+Optimizing NNI: done in 0.073293 secs using 799.8% CPU
+Optimizing NNI: done in 0.099339 secs using 793.4% CPU
+Optimizing NNI: done in 0.12317 secs using 781.9% CPU
+Iteration 40 / LogL: -115761.142 / Time: 0h:0m:6s (0h:0m:10s left)
+Optimizing NNI: done in 0.0528631 secs using 779.2% CPU
+Optimizing NNI: done in 0.0587671 secs using 797.1% CPU
+Optimizing NNI: done in 0.117481 secs using 799.4% CPU
+Optimizing NNI: done in 0.0936549 secs using 799.6% CPU
+Optimizing NNI: done in 0.109126 secs using 792.7% CPU
+Optimizing NNI: done in 0.124451 secs using 797.4% CPU
+Optimizing NNI: done in 0.0731559 secs using 798.9% CPU
+Optimizing NNI: done in 0.150286 secs using 794% CPU
+Optimizing NNI: done in 0.113492 secs using 798.7% CPU
+Optimizing NNI: done in 0.104894 secs using 790.7% CPU
+Iteration 50 / LogL: -115761.102 / Time: 0h:0m:7s (0h:0m:7s left)
+Log-likelihood cutoff on original alignment: -115806.948
+Optimizing NNI: done in 0.0936611 secs using 784.3% CPU
+Optimizing NNI: done in 0.115199 secs using 785.1% CPU
+Optimizing NNI: done in 0.0784161 secs using 802.1% CPU
+Optimizing NNI: done in 0.101784 secs using 797.8% CPU
+Optimizing NNI: done in 0.126443 secs using 791.4% CPU
+Optimizing NNI: done in 0.0935619 secs using 788.2% CPU
+Optimizing NNI: done in 0.0982111 secs using 784.2% CPU
+Optimizing NNI: done in 0.094481 secs using 798.7% CPU
+Optimizing NNI: done in 0.0961249 secs using 777.5% CPU
+Optimizing NNI: done in 0.0589519 secs using 789.1% CPU
+Iteration 60 / LogL: -115763.056 / Time: 0h:0m:8s (0h:0m:5s left)
+Optimizing NNI: done in 0.0798631 secs using 801.1% CPU
+Optimizing NNI: done in 0.103771 secs using 786% CPU
+Optimizing NNI: done in 0.123487 secs using 798% CPU
+Optimizing NNI: done in 0.107971 secs using 798% CPU
+Optimizing NNI: done in 0.135677 secs using 801% CPU
+Optimizing NNI: done in 0.127243 secs using 800.8% CPU
+Optimizing NNI: done in 0.0940931 secs using 793.8% CPU
+Optimizing NNI: done in 0.0916469 secs using 773.4% CPU
+Optimizing NNI: done in 0.117759 secs using 800.6% CPU
+Optimizing NNI: done in 0.0734599 secs using 795.4% CPU
+Iteration 70 / LogL: -115761.617 / Time: 0h:0m:9s (0h:0m:4s left)
+Optimizing NNI: done in 0.09951 secs using 784% CPU
+Optimizing NNI: done in 0.0945539 secs using 802% CPU
+Optimizing NNI: done in 0.109317 secs using 801.3% CPU
+Optimizing NNI: done in 0.10896 secs using 802.8% CPU
+Optimizing NNI: done in 0.090436 secs using 801.3% CPU
+Optimizing NNI: done in 0.0736589 secs using 784% CPU
+Optimizing NNI: done in 0.0829191 secs using 771.9% CPU
+Optimizing NNI: done in 0.0900128 secs using 815.2% CPU
+Optimizing NNI: done in 0.099231 secs using 805.6% CPU
+Optimizing NNI: done in 0.070662 secs using 799.7% CPU
+Iteration 80 / LogL: -115786.571 / Time: 0h:0m:10s (0h:0m:2s left)
+Optimizing NNI: done in 0.086055 secs using 797.5% CPU
+Optimizing NNI: done in 0.0669298 secs using 769.1% CPU
+Optimizing NNI: done in 0.108117 secs using 797.4% CPU
+Optimizing NNI: done in 0.109412 secs using 788.9% CPU
+Optimizing NNI: done in 0.116254 secs using 794% CPU
+Optimizing NNI: done in 0.0791609 secs using 772.4% CPU
+Optimizing NNI: done in 0.150051 secs using 801.2% CPU
+Optimizing NNI: done in 0.131995 secs using 786.7% CPU
+Optimizing NNI: done in 0.133601 secs using 778.3% CPU
+Optimizing NNI: done in 0.103295 secs using 798.1% CPU
+Iteration 90 / LogL: -115762.784 / Time: 0h:0m:11s (0h:0m:1s left)
+Optimizing NNI: done in 0.095541 secs using 803.1% CPU
+Optimizing NNI: done in 0.085953 secs using 796.7% CPU
+Optimizing NNI: done in 0.11537 secs using 779.5% CPU
+Optimizing NNI: done in 0.100753 secs using 801.5% CPU
+Optimizing NNI: done in 0.0772169 secs using 779% CPU
+Optimizing NNI: done in 0.110438 secs using 801.6% CPU
+Optimizing NNI: done in 0.06884 secs using 805.9% CPU
+Optimizing NNI: done in 0.122779 secs using 792.8% CPU
+Optimizing NNI: done in 0.126655 secs using 785.2% CPU
+Optimizing NNI: done in 0.0942831 secs using 812.6% CPU
+Iteration 100 / LogL: -115780.374 / Time: 0h:0m:12s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -115806.948
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+Optimizing NNI: done in 0.125477 secs using 786.6% CPU
+Optimizing NNI: done in 0.119794 secs using 793.2% CPU
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:12s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -115761.007
+Current log-likelihood at step 1: -115760.924
+Current log-likelihood at step 2: -115760.844
+Current log-likelihood at step 3: -115760.770
+Current log-likelihood at step 4: -115760.699
+Current log-likelihood at step 5: -115760.633
+Current log-likelihood at step 6: -115760.569
+Current log-likelihood at step 7: -115760.510
+Current log-likelihood at step 8: -115760.453
+Current log-likelihood at step 9: -115760.400
+Current log-likelihood at step 10: -115760.349
+Current log-likelihood at step 11: -115760.301
+Current log-likelihood at step 12: -115760.256
+Current log-likelihood at step 13: -115760.215
+Current log-likelihood at step 14: -115760.176
+Current log-likelihood at step 15: -115760.138
+Current log-likelihood at step 16: -115760.103
+Current log-likelihood at step 17: -115760.070
+Current log-likelihood at step 18: -115760.038
+Current log-likelihood at step 19: -115760.009
+Current log-likelihood at step 20: -115759.981
+Current log-likelihood at step 21: -115759.953
+Current log-likelihood at step 22: -115759.928
+Current log-likelihood at step 23: -115759.904
+Current log-likelihood at step 24: -115759.882
+Current log-likelihood at step 25: -115759.858
+Current log-likelihood at step 26: -115759.839
+Current log-likelihood at step 27: -115759.820
+Current log-likelihood at step 28: -115759.802
+Current log-likelihood at step 29: -115759.783
+Current log-likelihood at step 30: -115759.768
+Current log-likelihood at step 31: -115759.752
+Current log-likelihood at step 32: -115759.738
+Current log-likelihood at step 33: -115759.724
+Current log-likelihood at step 34: -115759.712
+Current log-likelihood at step 35: -115759.699
+Current log-likelihood at step 36: -115759.688
+Current log-likelihood at step 37: -115759.677
+Current log-likelihood at step 38: -115759.667
+Partition-specific rates:  1.191 0.946 1.550 0.816 0.620 1.064 1.161
+Parameters optimization took 37 rounds (0.686 sec)
+
+Partition information was printed to turtle.merge.best_model.nex
+BEST SCORE FOUND : -115759.667
+Creating bootstrap support values...
+Split supports printed to NEXUS file turtle.merge.splits.nex
+Total tree length: 1.951
+
+Total number of iterations: 102
+CPU time used for tree search: 97.708 sec (0h:1m:37s)
+Wall-clock time used for tree search: 12.512 sec (0h:0m:12s)
+Total CPU time used: 107.089 sec (0h:1m:47s)
+Total wall-clock time used: 13.683 sec (0h:0m:13s)
+
+Computing bootstrap consensus tree...
+Reading input file turtle.merge.splits.nex...
+16 taxa and 36 splits.
+Consensus tree written to turtle.merge.contree
+Reading input trees file turtle.merge.contree
+Log-likelihood of consensus tree: -115759.667
+
+Analysis results written to: 
+  IQ-TREE report:                turtle.merge.iqtree
+  Maximum-likelihood tree:       turtle.merge.treefile
+  Likelihood distances:          turtle.merge.mldist
+  Best partitioning scheme:      turtle.merge.best_scheme.nex
+           in RAxML format:      turtle.merge.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          turtle.merge.splits.nex
+  Consensus tree:                turtle.merge.contree
+  Screen log file:               turtle.merge.log
+
+Date and Time: Wed Jul 26 17:55:31 2023

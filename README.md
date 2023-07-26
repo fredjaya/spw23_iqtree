@@ -1,5 +1,7 @@
 # IQ-TREE 2 Workshop Tutorial (Sydney 2023)  
 
+*Authors: Minh Bui, Fred Jaya*  
+
 ## Table of Contents
 - [1) Input data](#1-input-data)
 - [2) Inferring the first phylogeny](#2-inferring-the-first-phylogeny)
@@ -12,7 +14,7 @@
 
 ## Installation  
 Please [download version 2.2.2.6](https://github.com/iqtree/iqtree2/releases/tag/v2.2.2.6) 
-and [install](../Quickstart) the binary for your platform. 
+and [install](http://www.iqtree.org/doc/Quickstart) the binary for your platform. 
 For the next steps, the folder containing your `iqtree2` executable should be added to 
 your PATH enviroment variable so that IQ-TREE can be invoked by simply entering `iqtree2` 
 at the command-line. See:  
@@ -185,8 +187,7 @@ Options explained:
 > * Does this tree agree with the published tree ([Chiari et al., 2012])?
 
 
-5) Tree mixture model
----------------------
+## 5. Tree mixture model
 
 The Mixtures Across Sites and Trees (MAST) model can be used analyze different topologies.
 By relaxing the assumption of a single bifurcating tree on the data, 
@@ -238,7 +239,7 @@ Options explained:
 </details>
 
 **QUESTIONS:**
-> * Look at `turle.mix.iqtree` for the line printing the tree weights. Which tree has a higher weight? 
+> * Look at `turtle.mix.iqtree` for the line printing the tree weights. Which tree has a higher weight? 
 
 ## 6. Identifying most influential genes
 
