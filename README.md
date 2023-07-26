@@ -359,7 +359,7 @@ Similarly, you can compute gCF and sCF for the tree under unpartitioned model:
 > * Visualise `turtle.fa.treefile.cf.tree`. How do these values look like now on the 
 >   contradicting branch?
 
-### Final questions  
+## Final questions  
 * Given all analyses you have done in this tutorial, which relationship between 
 Turtle, Crocodile and Bird is true in your opinion?
 

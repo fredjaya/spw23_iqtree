@@ -1,0 +1,38 @@
+# Concordance factor statistics
+# This file can be read in MS Excel or in R with command:
+#   tab=read.table('../02_first_tree/turtle.fa.treefile.cf.stat',header=TRUE)
+# Columns are tab-separated with following meaning:
+#   ID: Branch ID
+#   gCF: Gene concordance factor (=gCF_N/gN %)
+#   gCF_N: Number of trees concordant with the branch
+#   gDF1: Gene discordance factor for NNI-1 branch (=gDF1_N/gN %)
+#   gDF1_N: Number of trees concordant with NNI-1 branch
+#   gDF2: Gene discordance factor for NNI-2 branch (=gDF2_N/gN %)
+#   gDF2_N: Number of trees concordant with NNI-2 branch
+#   gDFP: Gene discordance factor due to polyphyly (=gDFP_N/gN %)
+#   gDFP_N: Number of trees decisive but discordant due to polyphyly
+#   gN: Number of trees decisive for the branch
+#   sCF: Site concordance factor averaged over 100 quartets (=sCF_N/sN %)
+#   sCF_N: sCF in absolute number of sites
+#   sDF1: Site discordance factor for alternative quartet 1 (=sDF1_N/sN %)
+#   sDF1_N: sDF1 in absolute number of sites
+#   sDF2: Site discordance factor for alternative quartet 2 (=sDF2_N/sN %)
+#   sDF2_N: sDF2 in absolute number of sites
+#   sN: Number of informative sites averaged over 100 quartets
+#   Label: Existing branch label
+#   Length: Branch length
+# *NOTE*: (gCF+gDF1+gDF2+gDFP) = 100% and (gCF_N+gDF1_N+gDF2_N+gDFP_N) = gN
+ID	gCF	gCF_N	gDF1	gDF1_N	gDF2	gDF2_N	gDFP	gDFP_N	gN	sCF	sCF_N	sDF1	sDF1_N	sDF2	sDF2_N	sN	Label	Length
+17	72.73	8	18.18	2	0	0	9.09	1	11	48.18	167.28	28.21	97.76	23.62	85.86	350.9	100	0.0977759
+18	48.28	14	10.34	3	20.69	6	20.69	6	29	40.64	132.59	25.85	88	33.52	111.43	332.02	100	0.0385526
+19	100	13	0	0	0	0	0	0	13	54.94	115.91	23.47	46.45	21.6	42.95	205.31	100	0.0981316
+20	75	3	0	0	25	1	0	0	4	38.06	27.49	28.37	20.84	33.57	24.88	73.21	39	0.00451834
+21	37.93	11	17.24	5	10.34	3	34.48	10	29	41.49	108.69	26.89	71.87	31.62	79.66	260.22	98	0.015427
+22	89.66	26	0	0	0	0	10.34	3	29	60.8	255.21	20.66	82.26	18.55	66.03	403.5	100	0.0713893
+23	13.79	4	44.83	13	6.9	2	34.48	10	29	41.74	87.15	35.56	64.82	22.7	43.02	194.99	81	0.0219631
+24	100	3	0	0	0	0	0	0	3	94.82	20.75	3.39	1	0.79	0.23	21.98	100	0.071959
+25	95.24	20	0	0	0	0	4.76	1	21	71.01	64.01	14.48	11.8	11.51	9.92	85.73	100	0.0396181
+26	83.33	10	16.67	2	0	0	0	0	12	66.89	30.36	20.43	9.73	12.68	6.87	46.96	100	0.010731
+27	60	3	20	1	20	1	0	0	5	52.91	9.35	33.75	4.87	13.35	2.5	16.72	96	0.00336549
+28	79.31	23	0	0	6.9	2	13.79	4	29	45.55	248.91	25.44	138.7	29	159.08	546.69	100	0.058781
+29	65.52	19	13.79	4	3.45	1	17.24	5	29	41.96	291.45	30.27	211.72	27.76	189.98	693.15	100	0.0317904
