@@ -2,6 +2,8 @@
 
 *Authors: Minh Bui, Fred Jaya*  
 
+**For all enquiries, contact frederick.jaya[at]anu.edu.au**   
+
 ## Table of Contents
 - [1) Input data](#1-input-data)
 - [2) Inferring the first phylogeny](#2-inferring-the-first-phylogeny)
@@ -391,4 +393,3 @@ Turtle, Crocodile and Bird is true in your opinion?
 [Wang et al., 2018]: https://doi.org/10.1093/sysbio/syx068
 [Yang, 1994]: https://doi.org/10.1007/BF00160154
 [Yang, 1995]: http://www.genetics.org/content/139/2/993.abstract
-
